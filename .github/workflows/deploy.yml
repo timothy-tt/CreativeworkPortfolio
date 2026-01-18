@@ -1,0 +1,31 @@
+name: Deploy to Self-Hosted
+
+on:
+  push:
+    branches:
+      - '**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to web directory
+        run: |
+          # Adjust the deployment path as needed
+          DEPLOY_PATH="/var/www/portfolio"
+
+          # Create directory if it doesn't exist
+          sudo mkdir -p $DEPLOY_PATH
+
+          # Copy files to deployment directory
+          sudo cp -r ./* $DEPLOY_PATH/
+
+          # Set proper permissions
+          sudo chown -R www-data:www-data $DEPLOY_PATH
+          sudo chmod -R 755 $DEPLOY_PATH
+
+          echo "Deployed to $DEPLOY_PATH"
