@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Traveler Profile Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FF6B6B", // Coral Pink
+                        secondary: "#006994", // Deep Sea Blue accent
+                        "background-light": "#F0F8FF", // Alice Blue (very light blue)
+                        "background-dark": "#0A1929", // Very dark blue
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#132F4C", // Lighter than bg-dark
+                        "text-light": "#1E293B",
+                        "text-dark": "#E2E8F0",
+                    },
+                    fontFamily: {
+                        display: ["'Plus Jakarta Sans'", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1rem",
+                        'xl': '1.5rem',
+                        '2xl': '2rem',
+                        '3xl': '2.5rem',
+                    },
+                    boxShadow: {
+                        'nav': '0 15px 40px -10px rgba(0,0,0,0.15), 0 5px 15px -5px rgba(0,0,0,0.05)',
+                        'card': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
+                    }
+                },
+            },
+        };
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scrollbar-width: none; 
+            -ms-overflow-style: none;
+            min-height: max(884px, 100dvh);
+        }
+        body::-webkit-scrollbar { 
+            display: none; 
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .dark .glass-panel {
+            background: rgba(19, 47, 76, 0.6);
+        }
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+        .dark .nav-glass {
+            background: rgba(10, 25, 41, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark min-h-screen antialiased transition-colors duration-300">
+<div class="max-w-md mx-auto relative min-h-screen pb-32 overflow-hidden shadow-2xl bg-background-light dark:bg-background-dark">
+<div class="flex justify-between items-center px-6 pt-5 pb-2">
+<span class="text-sm font-semibold">9:41</span>
+<div class="flex space-x-2 items-center">
+<span class="material-symbols-outlined text-[18px]">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[18px]">wifi</span>
+<span class="material-symbols-outlined text-[18px]">battery_full</span>
+</div>
+</div>
+<div class="flex flex-col items-center px-6 pt-8 pb-4">
+<div class="relative group cursor-pointer">
+<div class="absolute -inset-1 bg-gradient-to-br from-primary to-secondary rounded-full opacity-20 blur group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+<div class="relative">
+<img alt="Shahzaib Profile" class="w-28 h-28 rounded-full object-cover border-4 border-white dark:border-surface-dark shadow-xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhI1jSGrF4m9APbCFW_jvSfpNEV0Hr0iXkiU2mFtyOSYBmBeDWLWIXo2wfuMdSDUJcDF0TtEUvp87mTkkUclj-I91n94L2gbHIX_LjZ31xYPv33hnXmd3nZCYerYalY_i9v3rMjDb3jKvhqig4BkPFBcvvbg6RVVYi0WhO4G-t7W9zzEfsF6BVxKsNaGibv29CBgZd-pzrBFp5-rPenIEI1yz-Uk238ALQqnleFX5MJ5Dm0IV3d7AL2YzCFC4oAOo3OpEH4bmfFzjt"/>
+<div class="absolute bottom-1 right-1 w-6 h-6 bg-teal-400 rounded-full border-4 border-white dark:border-background-dark shadow-sm"></div>
+</div>
+</div>
+<h1 class="mt-5 text-2xl font-bold text-gray-900 dark:text-white tracking-tight">Shahzaib</h1>
+<p class="mt-2 text-sm text-center text-slate-500 dark:text-gray-400 font-medium leading-relaxed max-w-[260px]">
+            Tropical traveler exploring the world one island at a time.
+        </p>
+<div class="w-full mt-8 bg-white dark:bg-surface-dark rounded-2xl p-4 shadow-sm border border-gray-100 dark:border-gray-700 flex justify-around items-center divide-x divide-gray-100 dark:divide-gray-700/50">
+<div class="flex-1 flex flex-col items-center group cursor-pointer">
+<span class="text-lg font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">12</span>
+<span class="text-xs font-semibold text-gray-400 uppercase tracking-wide mt-0.5">Trips</span>
+</div>
+<div class="flex-1 flex flex-col items-center group cursor-pointer">
+<span class="text-lg font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">24</span>
+<span class="text-xs font-semibold text-gray-400 uppercase tracking-wide mt-0.5">Saved</span>
+</div>
+<div class="flex-1 flex flex-col items-center group cursor-pointer">
+<span class="text-lg font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">8</span>
+<span class="text-xs font-semibold text-gray-400 uppercase tracking-wide mt-0.5">Reviews</span>
+</div>
+</div>
+</div>
+<div class="px-6 mt-4 space-y-4">
+<button class="w-full bg-white dark:bg-surface-dark p-4 rounded-2xl flex items-center shadow-sm border border-transparent hover:border-primary/20 transition-all active:scale-[0.99] group">
+<div class="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-secondary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-[24px]">airplane_ticket</span>
+</div>
+<div class="flex-1 text-left ml-4">
+<h3 class="font-semibold text-gray-900 dark:text-white text-[15px]">My Bookings</h3>
+</div>
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<button class="w-full bg-white dark:bg-surface-dark p-4 rounded-2xl flex items-center shadow-sm border border-transparent hover:border-primary/20 transition-all active:scale-[0.99] group">
+<div class="w-12 h-12 rounded-xl bg-teal-50 dark:bg-teal-900/20 flex items-center justify-center text-teal-600 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-[24px]">credit_card</span>
+</div>
+<div class="flex-1 text-left ml-4">
+<h3 class="font-semibold text-gray-900 dark:text-white text-[15px]">Payment Methods</h3>
+</div>
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<button class="w-full bg-white dark:bg-surface-dark p-4 rounded-2xl flex items-center shadow-sm border border-transparent hover:border-primary/20 transition-all active:scale-[0.99] group">
+<div class="w-12 h-12 rounded-xl bg-orange-50 dark:bg-orange-900/20 flex items-center justify-center text-orange-500 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-[24px]">tune</span>
+</div>
+<div class="flex-1 text-left ml-4">
+<h3 class="font-semibold text-gray-900 dark:text-white text-[15px]">Travel Preferences</h3>
+</div>
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<button class="w-full bg-white dark:bg-surface-dark p-4 rounded-2xl flex items-center shadow-sm border border-transparent hover:border-primary/20 transition-all active:scale-[0.99] group">
+<div class="w-12 h-12 rounded-xl bg-purple-50 dark:bg-purple-900/20 flex items-center justify-center text-purple-500 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-[24px]">support_agent</span>
+</div>
+<div class="flex-1 text-left ml-4">
+<h3 class="font-semibold text-gray-900 dark:text-white text-[15px]">Help &amp; Support</h3>
+</div>
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600 group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<button class="w-full mt-2 p-3 flex items-center justify-center text-slate-400 font-semibold text-sm hover:text-primary hover:bg-red-50 dark:hover:bg-red-900/10 rounded-2xl transition-all">
+<span class="material-symbols-outlined text-[18px] mr-2">logout</span>
+            Sign Out
+        </button>
+</div>
+<div class="fixed bottom-8 left-0 right-0 z-50 flex justify-center px-4">
+<div class="nav-glass rounded-[2.5rem] w-full max-w-[360px] h-[84px] p-2.5 flex items-center shadow-nav">
+<div class="flex-1 flex justify-between items-center px-6">
+<button class="w-10 h-10 flex items-center justify-center text-gray-400 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-[28px] group-hover:scale-110 transition-transform">home</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center text-gray-400 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-[28px] group-hover:scale-110 transition-transform">airplane_ticket</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center text-gray-400 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-[28px] group-hover:scale-110 transition-transform">favorite</span>
+</button>
+</div>
+<button class="h-full bg-primary text-white rounded-[2rem] px-6 flex items-center gap-3 shadow-lg shadow-primary/25 transition-transform active:scale-95 flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">person</span>
+<span class="text-sm font-bold tracking-wide">Profile</span>
+</button>
+</div>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Saved Paradise Collection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FF6B6B", // Coral Pink
+                        secondary: "#006994", // Deep Sea Blue accent
+                        "background-light": "#F0F8FF", // Alice Blue (very light blue)
+                        "background-dark": "#0A1929", // Very dark blue
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#132F4C", // Lighter than bg-dark
+                        "text-light": "#1E293B",
+                        "text-dark": "#E2E8F0",
+                    },
+                    fontFamily: {
+                        display: ["'Plus Jakarta Sans'", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "1rem",
+                        'xl': '1.5rem',
+                        '2xl': '2rem',
+                        '3xl': '2.5rem',
+                    },
+                    boxShadow: {
+                        'nav': '0 15px 40px -10px rgba(0,0,0,0.15), 0 5px 15px -5px rgba(0,0,0,0.05)',
+                        'card': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
+                    }
+                },
+            },
+        };
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scrollbar-width: none; 
+            -ms-overflow-style: none;
+        }
+        body::-webkit-scrollbar { 
+            display: none; 
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .dark .glass-panel {
+            background: rgba(19, 47, 76, 0.6);
+        }
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+        .dark .nav-glass {
+            background: rgba(10, 25, 41, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .card-gradient-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 100%);
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark min-h-screen antialiased transition-colors duration-300">
+<div class="max-w-md mx-auto relative min-h-screen pb-0 overflow-hidden shadow-2xl bg-background-light dark:bg-background-dark">
+<div class="flex justify-between items-center px-6 pt-5 pb-2">
+<span class="text-sm font-semibold">9:41</span>
+<div class="flex space-x-2 items-center">
+<span class="material-symbols-outlined text-[18px]">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[18px]">wifi</span>
+<span class="material-symbols-outlined text-[18px]">battery_full</span>
+</div>
+</div>
+<header class="px-6 mt-6 flex justify-between items-end">
+<div>
+<h1 class="text-3xl font-bold text-gray-900 dark:text-white leading-tight tracking-tight">Your Paradise<br/>Collection</h1>
+</div>
+<div class="pb-1">
+<button class="w-10 h-10 rounded-full bg-white dark:bg-surface-dark shadow-sm border border-gray-100 dark:border-gray-700 flex items-center justify-center relative hover:bg-gray-50 transition-colors">
+<span class="material-symbols-outlined text-gray-700 dark:text-gray-200 text-[20px]">sort</span>
+</button>
+</div>
+</header>
+<div class="px-6 mt-6">
+<div class="p-1.5 bg-white dark:bg-surface-dark rounded-2xl flex shadow-sm border border-gray-100 dark:border-gray-700 relative">
+<button class="flex-1 py-3 rounded-xl bg-primary text-white shadow-md text-sm font-bold transition-all z-10">
+                Destinations
+             </button>
+<button class="flex-1 py-3 rounded-xl text-gray-500 dark:text-gray-400 text-sm font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-all z-10">
+                Experiences
+             </button>
+</div>
+</div>
+<div class="px-6 mt-6 grid grid-cols-2 gap-5 pb-32 overflow-y-auto" style="height: calc(100vh - 240px); scrollbar-width: none;">
+<div class="relative aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-card group">
+<img alt="Santorini" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRJH82W-PvxmO_a6gVkpkjC6yfRIk_5vYHTrRVvefaGYAkTYK9v1dNqKmQnYYokDuVt_-Hjsq-U6k5Oo4xqCt7DoHjYteT9NloNSWUOl7txJuADDCrufySFzZrPQbB5IgXPFlsi8xvgqujRloCMCuy57tWpOCKhi5jkGz1IrS9H-rHitARjk9tCknRErSYNlfrKC_cNIAIjgzYj8-dp9JfeHZAY-WMflkpnhJjr6Tqc0rNjswcgAWxWV9Nfg6hqOos4ZjXDXU2a--j"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-white/30 transition-colors shadow-lg">
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">favorite</span>
+</button>
+<div class="absolute top-3 left-3 bg-black/30 backdrop-blur-md px-2 py-1 rounded-lg flex items-center gap-1 border border-white/10 shadow-sm">
+<span class="material-symbols-outlined text-yellow-400 text-[14px] fill-1">star</span>
+<span class="text-white text-xs font-bold">4.9</span>
+</div>
+<div class="absolute bottom-4 left-4 right-4">
+<h3 class="text-white font-bold text-lg drop-shadow-md leading-tight mb-1">Santorini</h3>
+<div class="flex items-center gap-1 text-white/90 text-xs font-medium">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                    Greece
+                </div>
+</div>
+</div>
+<div class="relative aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-card group">
+<img alt="Seychelles" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRdCKj_O0H7pX4vV9wDWHyDURzgJo-knFmsDWzr2Fv6KIo1-HGAQGkNQYuqDsZgQcNbC2EwiXnJN2Tqc9SDutNFb6WWZPGUWj2zWhcSYZfMjmXOL9K9S1PwY9DX8ZWLpFqwd7btiYXhjD8b6MRILHSDeYa2KX1OJYWvWwQLsd4J7E163qREE1Xr0qQt6QRhalMJZo4HgT5rznbmGg_iyG_ilmA9eivwG7RQvFuJBaxMCg0hkQoWSB-tDTrLgtbkB0bW3Mj_0FmLFuJ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-white/30 transition-colors shadow-lg">
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">favorite</span>
+</button>
+<div class="absolute top-3 left-3 bg-black/30 backdrop-blur-md px-2 py-1 rounded-lg flex items-center gap-1 border border-white/10 shadow-sm">
+<span class="material-symbols-outlined text-yellow-400 text-[14px] fill-1">star</span>
+<span class="text-white text-xs font-bold">4.8</span>
+</div>
+<div class="absolute bottom-4 left-4 right-4">
+<h3 class="text-white font-bold text-lg drop-shadow-md leading-tight mb-1">Seychelles</h3>
+<div class="flex items-center gap-1 text-white/90 text-xs font-medium">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                    East Africa
+                </div>
+</div>
+</div>
+<div class="relative aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-card group">
+<img alt="Bali" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpLJjzORB5d31QuqfCWW22Hfzvi3LXf6wok80b4YtjMpteL1gR1cKW1ZjjpY544PBMtr5b3nszuL8m28vgX9fzdsKNWrKeJY5rt2oaRLspmj0F74L6S9AU53FHODtREP3AiZIQb93szURu_xjtTgCLUS2k0v1V1sfTv3rgKSs0UHfW520NknT0-FgPwDrSWZLArbSUJ_cC6SMtqzhacc-ICSr-3NU-eZTlxbGMyW6CB6ZFNcvUGpIStWM5_Gziej9NdN88Car2ep2g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-white/30 transition-colors shadow-lg">
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">favorite</span>
+</button>
+<div class="absolute top-3 left-3 bg-black/30 backdrop-blur-md px-2 py-1 rounded-lg flex items-center gap-1 border border-white/10 shadow-sm">
+<span class="material-symbols-outlined text-yellow-400 text-[14px] fill-1">star</span>
+<span class="text-white text-xs font-bold">4.7</span>
+</div>
+<div class="absolute bottom-4 left-4 right-4">
+<h3 class="text-white font-bold text-lg drop-shadow-md leading-tight mb-1">Bali</h3>
+<div class="flex items-center gap-1 text-white/90 text-xs font-medium">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                    Indonesia
+                </div>
+</div>
+</div>
+<div class="relative aspect-[4/5] w-full rounded-2xl overflow-hidden shadow-card group">
+<img alt="Maui" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRdCKj_O0H7pX4vV9wDWHyDURzgJo-knFmsDWzr2Fv6KIo1-HGAQGkNQYuqDsZgQcNbC2EwiXnJN2Tqc9SDutNFb6WWZPGUWj2zWhcSYZfMjmXOL9K9S1PwY9DX8ZWLpFqwd7btiYXhjD8b6MRILHSDeYa2KX1OJYWvWwQLsd4J7E163qREE1Xr0qQt6QRhalMJZo4HgT5rznbmGg_iyG_ilmA9eivwG7RQvFuJBaxMCg0hkQoWSB-tDTrLgtbkB0bW3Mj_0FmLFuJ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-white/30 transition-colors shadow-lg">
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">favorite</span>
+</button>
+<div class="absolute top-3 left-3 bg-black/30 backdrop-blur-md px-2 py-1 rounded-lg flex items-center gap-1 border border-white/10 shadow-sm">
+<span class="material-symbols-outlined text-yellow-400 text-[14px] fill-1">star</span>
+<span class="text-white text-xs font-bold">4.9</span>
+</div>
+<div class="absolute bottom-4 left-4 right-4">
+<h3 class="text-white font-bold text-lg drop-shadow-md leading-tight mb-1">Maui</h3>
+<div class="flex items-center gap-1 text-white/90 text-xs font-medium">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                    Hawaii
+                </div>
+</div>
+</div>
+<div class="col-span-2 h-8"></div>
+</div>
+<div class="fixed bottom-8 left-0 right-0 z-50 flex justify-center px-4">
+<div class="nav-glass rounded-[2.5rem] w-full max-w-[360px] h-[84px] p-2 flex items-center justify-between shadow-nav">
+<button class="w-14 h-14 flex items-center justify-center text-gray-400 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-[28px] group-hover:scale-110 transition-transform">home</span>
+</button>
+<button class="w-14 h-14 flex items-center justify-center text-gray-400 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-[28px] group-hover:scale-110 transition-transform">airplane_ticket</span>
+</button>
+<button class="h-[64px] bg-primary text-white rounded-[2rem] px-6 flex items-center gap-2 shadow-lg shadow-primary/25 transition-transform active:scale-95 flex-shrink-0">
+<span class="material-symbols-outlined text-[26px] fill-1">favorite</span>
+<span class="text-sm font-bold tracking-wide">Saved</span>
+</button>
+<button class="w-14 h-14 flex items-center justify-center text-gray-400 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-[28px] group-hover:scale-110 transition-transform">person</span>
+</button>
+</div>
+</div>
+</div>
+
+</body></html>
