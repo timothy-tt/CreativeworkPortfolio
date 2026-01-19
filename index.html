@@ -113,11 +113,15 @@
       font-size: 3rem;
       font-weight: 700;
       color: #fff;
-      margin-bottom: 15px;
+      margin-bottom: 5px;
       position: sticky;
       top: 20px;
-      background: inherit;
-      padding: 10px 0;
+      background: linear-gradient(to bottom, #0a0a0a 70%, transparent);
+      padding: 10px 0 30px 0;
+    }
+
+    .year-section:nth-child(even) h2 {
+      background: linear-gradient(to bottom, #0f0f0f 70%, transparent);
     }
 
     /* Projects Container */
@@ -132,6 +136,10 @@
     .project {
       padding: 40px 0;
       border-bottom: 1px solid #333;
+    }
+
+    .project:first-child {
+      padding-top: 15px;
     }
 
     .project:last-child {
@@ -176,15 +184,6 @@
       flex: 0 0 auto;
       width: 500px;
       height: 700px;
-      background: #1a1a1a;
-      border: 1px solid #333;
-      border-radius: 8px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #666;
-      font-size: 0.85rem;
     }
 
     .project-images .project-image img {
