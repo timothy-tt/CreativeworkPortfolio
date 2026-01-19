@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cuisine Categories Variant 3</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec4913",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221510",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom styles for sticky header blur effect */
+        .glass-header {
+            background: rgba(248, 246, 246, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .dark .glass-header {
+            background: rgba(34, 21, 16, 0.85);
+        }
+        /* Hide scrollbar for clean look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#181311] dark:text-white font-display min-h-screen flex flex-col overflow-hidden">
+<!-- App Container -->
+<div class="relative flex h-full w-full max-w-md mx-auto flex-col overflow-hidden bg-background-light dark:bg-background-dark shadow-2xl">
+<!-- Sticky Header -->
+<header class="glass-header sticky top-0 z-50 flex items-center justify-between px-5 py-4 border-b border-black/5 dark:border-white/5 transition-colors duration-300">
+<button class="flex items-center justify-center p-2 -ml-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight text-center flex-1">Discover Flavors</h1>
+<button class="flex items-center justify-center p-2 -mr-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+</header>
+<!-- Main Content (Scrollable) -->
+<main class="flex-1 overflow-y-auto no-scrollbar pb-24 px-5 pt-4">
+<!-- Section Header -->
+<div class="mb-6 mt-2">
+<p class="text-sm font-medium text-primary uppercase tracking-widest mb-1">Browse Categories</p>
+<h2 class="text-3xl font-light text-gray-900 dark:text-gray-100">Vietnamese Kitchen</h2>
+</div>
+<!-- Card List -->
+<div class="flex flex-col gap-6">
+<!-- Card 1: Phở & Soups -->
+<div class="group relative w-full h-64 rounded-xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Steaming bowl of Pho Bo with fresh herbs and lime" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBnXHNsVa4IQwGw0X5NqdwFKRhADNxxWut0NMoJwLZlJ7jfXGsDUJAr525mslXoy9fgOQLRn3XJ0g4RWRgA_JQrg34yQh_rPHUyDD15DBSH7kr71txlDHAX0b14eRCOKKVuE70S7gT9juI5yR0x-3ULPI5OZ_slKMGCNPo8hEQJnn-B8FxAbRE2o5Kn8YcpgvGydCgfUXozQFFIgYPsdBwwpom_LjkG2OIkuHyGbFOzmZbL1pG2J6KNL45vzBsY5hBgxb_pFFHrKkeC");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute top-4 right-4">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-primary text-white shadow-sm">
+                            Popular
+                        </span>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-5">
+<h3 class="text-white text-3xl font-light tracking-tight mb-1">Phở &amp; Soups</h3>
+<div class="flex items-center gap-2">
+<span class="h-px w-8 bg-primary"></span>
+<p class="text-white/90 text-sm font-medium">42 Recipes</p>
+</div>
+</div>
+</div>
+<!-- Card 2: Rice Dishes -->
+<div class="group relative w-full h-64 rounded-xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Com Tam broken rice plate with grilled pork chop" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBN3VGnvh93gXwINjM2K7qpJxkNiHs3UwsiwI_1AqDibZhX297DN3Woju0p6gFGy1NyUmwDNRFffF3mDQFwZXd-6Sb6BehXgYLQQaDsCOnj5hKBlyNHS_tJRWUVd98BhQaucKa66Ra33vgUBM5GOw5c_0HWgTIoLn3oa8e8hdCKvUJJtM3PsY2UOQVgJp8dPvr0KEfXfEm3Kj7R8DE5MIb9dMKk3-yDomsqEsQHzOx9kW7q-0izohWu41DdNGUk_rGctGxsb_ToDxzP");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full p-5">
+<h3 class="text-white text-3xl font-light tracking-tight mb-1">Rice Dishes</h3>
+<div class="flex items-center gap-2">
+<span class="h-px w-8 bg-primary"></span>
+<p class="text-white/90 text-sm font-medium">35 Recipes</p>
+</div>
+</div>
+</div>
+<!-- Card 3: Noodle Salads -->
+<div class="group relative w-full h-64 rounded-xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Fresh Bun Thit Nuong vermicelli noodle bowl" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDWoQjSOVLz9l9OCvW--zIdXCeW7kLWo8NYZp1XljkwAKRxbN1M1nb67W9gdkF_DCQIxt6K_qTIoVEmaS0q2bpJzDLOfYRagRDkqOZrbKnDD747QP6e755TJMSrV-om4r7mbwXtVQgJVVbGgnx5bl9-sCLicFX083dDUxHvOJYFo5bKGlhoTeP9NZJayKJxKqApw61strfAWii5waPJCC6ZfEnvDry_5PIB12idOsQDQlLBKtEqnea3IkBeKErV5thZu5gwdfYj5pN1");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full p-5">
+<h3 class="text-white text-3xl font-light tracking-tight mb-1">Noodle Salads</h3>
+<div class="flex items-center gap-2">
+<span class="h-px w-8 bg-primary"></span>
+<p class="text-white/90 text-sm font-medium">28 Recipes</p>
+</div>
+</div>
+</div>
+<!-- Card 4: Traditional Desserts -->
+<div class="group relative w-full h-64 rounded-xl overflow-hidden cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Colorful Vietnamese Che dessert with coconut milk" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDV4wKRlrg3sTcYtjwJy3zXuKclcBB53IDHI4l4bp2fBYNVVS7yUm1Pkm_uddf1dkjQgpn_hPaN02tMLbKjTmAqHIqvDb17DvliZmOM0LSF7l74BLWpkhpnWrt4tChGTcHl1vIctJQOshsGz1ZuyMr5Vhb9knjBcnhSLK2oukFq-LHwHAtq9hDcKufpHInFO0nai8POyfRMniu6CUHVT7C3SBEsoHwr0JTaKIHe-McEPH_cOU4FaTUwyLswctLeuI1Jls33-P9LG4f_");'>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full p-5">
+<h3 class="text-white text-3xl font-light tracking-tight mb-1">Traditional Desserts</h3>
+<div class="flex items-center gap-2">
+<span class="h-px w-8 bg-primary"></span>
+<p class="text-white/90 text-sm font-medium">19 Recipes</p>
+</div>
+</div>
+</div>
+<!-- Bottom spacer to account for nav bar overlay -->
+<div class="h-6"></div>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<nav class="absolute bottom-0 left-0 w-full bg-white dark:bg-[#1a100c] border-t border-gray-100 dark:border-white/5 py-3 px-6 pb-6 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)] z-40">
+<div class="flex justify-between items-center">
+<button class="flex flex-col items-center gap-1 text-primary group">
+<span class="material-symbols-outlined text-[28px] group-hover:scale-110 transition-transform">home</span>
+<span class="text-[10px] font-medium tracking-wide">Home</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500 hover:text-primary dark:hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-[28px] group-hover:scale-110 transition-transform">search</span>
+<span class="text-[10px] font-medium tracking-wide">Search</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500 hover:text-primary dark:hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-[28px] group-hover:scale-110 transition-transform">bookmark</span>
+<span class="text-[10px] font-medium tracking-wide">Saved</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-400 dark:text-gray-500 hover:text-primary dark:hover:text-primary transition-colors group">
+<div class="h-7 w-7 rounded-full overflow-hidden border border-transparent group-hover:border-primary transition-colors">
+<img alt="User profile avatar" class="h-full w-full object-cover" data-alt="User profile portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7pbYuU933mYpgeyaumMRIhmJMpcvTHD_1PQtNnhqbVjC2xwDQSpL-yAvHfbbBWbjPcAkyZHJplTQCtkxugi5_GoFvskBlOYkfgDttOHVmBVEn13dgi1GuBilsxwZ9BLSfWDJNvBwaV9xiyenG87Zb6qoZRPDIazVYZfiWlZLEoYmdQSjbpLadjXd9h8L9iVBcSjHmaLO8l6H2H_Wdq7nnqk64pAlzf_9yJG57Mgv60TuNGx6wzrC-mrfKoBqc4KqqwpQl3P459oLL"/>
+</div>
+<span class="text-[10px] font-medium tracking-wide">Profile</span>
+</button>
+</div>
+</nav>
+</div>
+</body></html>

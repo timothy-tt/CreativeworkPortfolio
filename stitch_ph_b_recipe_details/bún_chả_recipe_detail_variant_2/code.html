@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bún Chả Recipe Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec4913",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#221510",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#181311] dark:text-gray-100 antialiased selection:bg-primary/30">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden pb-24">
+<!-- Header Image & Navigation -->
+<div class="relative h-[45vh] w-full group/header">
+<!-- Background Image -->
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Close up artistic shot of Bun Cha Hanoi with grilled pork, vermicelli noodles and fresh herbs" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDSjI9LCuPA9JOMSPjCPA3Rd22E9HLySQcnz-4_1Lg-sSvl_Lpz2wrS1DxouTWhdxnUwQEWtdcE0Fhi--5LtfVa0QSxt7IRsdO338FhE33myd94RHq6kgwH3tWfYhciaeU415kKMY2kU3V_oF2eRh3zNHZFsPAEhBPxNGmbtmtY9ehymkh2yVe2iFbVdqQl2ohfyV5RRjMAoAv13mckfbLgttmRr4Nw9CwnGk4JETroCAz5inw0ItNZXxT9BAgjF6DzZ9maPSElCniP");'>
+</div>
+<!-- Overlay Gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<!-- Navigation Bar -->
+<div class="absolute top-0 left-0 right-0 z-10 flex items-center justify-between px-4 pt-12 pb-4">
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-md text-white transition hover:bg-white/30">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-md text-white transition hover:bg-white/30">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<!-- Title Overlay -->
+<div class="absolute bottom-0 left-0 w-full p-6">
+<span class="mb-2 inline-block rounded-md bg-primary/90 px-2 py-0.5 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-sm">
+                    Vietnamese
+                </span>
+<h1 class="font-display text-4xl font-bold leading-tight text-white shadow-sm">
+                    Bún Chả Hà Nội
+                </h1>
+<p class="mt-1 font-body text-base font-medium text-gray-200">
+                    Traditional Grilled Pork with Noodles
+                </p>
+</div>
+</div>
+<!-- Metadata Bar -->
+<div class="relative -mt-6 mx-4 rounded-xl bg-white dark:bg-[#2c201b] shadow-lg p-4 flex justify-between items-center z-10 border border-gray-100 dark:border-white/5">
+<div class="flex flex-col items-center gap-1 flex-1 border-r border-gray-100 dark:border-white/10">
+<span class="material-symbols-outlined text-primary" style="font-size: 24px;">equalizer</span>
+<span class="text-xs font-medium uppercase text-gray-400 dark:text-gray-500 tracking-wider">Difficulty</span>
+<span class="text-sm font-bold text-gray-900 dark:text-white">Medium</span>
+</div>
+<div class="flex flex-col items-center gap-1 flex-1 border-r border-gray-100 dark:border-white/10">
+<span class="material-symbols-outlined text-primary" style="font-size: 24px;">schedule</span>
+<span class="text-xs font-medium uppercase text-gray-400 dark:text-gray-500 tracking-wider">Time</span>
+<span class="text-sm font-bold text-gray-900 dark:text-white">45 min</span>
+</div>
+<div class="flex flex-col items-center gap-1 flex-1">
+<span class="material-symbols-outlined text-primary" style="font-size: 24px;">group</span>
+<span class="text-xs font-medium uppercase text-gray-400 dark:text-gray-500 tracking-wider">Servings</span>
+<span class="text-sm font-bold text-gray-900 dark:text-white">2 People</span>
+</div>
+</div>
+<!-- Main Content -->
+<div class="flex flex-col px-4 pt-8">
+<!-- Ingredients Header -->
+<div class="mb-5 flex items-center justify-between">
+<h2 class="font-display text-xl font-bold text-[#181311] dark:text-white">What You Need</h2>
+<span class="text-sm text-gray-500 dark:text-gray-400">8 items</span>
+</div>
+<!-- Ingredients Grid -->
+<div class="grid grid-cols-2 gap-3 pb-8">
+<!-- Item 1 -->
+<div class="flex items-center gap-3 rounded-xl bg-white dark:bg-[#2c201b] p-3 shadow-sm ring-1 ring-black/5 dark:ring-white/5">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/20">
+<span class="material-symbols-outlined">kebab_dining</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-[#181311] dark:text-white">Pork Belly</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">500g</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-3 rounded-xl bg-white dark:bg-[#2c201b] p-3 shadow-sm ring-1 ring-black/5 dark:ring-white/5">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/20">
+<span class="material-symbols-outlined">rice_bowl</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-[#181311] dark:text-white">Vermicelli</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">300g</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center gap-3 rounded-xl bg-white dark:bg-[#2c201b] p-3 shadow-sm ring-1 ring-black/5 dark:ring-white/5">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/20">
+<span class="material-symbols-outlined">liquor</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-[#181311] dark:text-white">Fish Sauce</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">3 tbsp</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="flex items-center gap-3 rounded-xl bg-white dark:bg-[#2c201b] p-3 shadow-sm ring-1 ring-black/5 dark:ring-white/5">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/20">
+<span class="material-symbols-outlined">grain</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-[#181311] dark:text-white">Sugar</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">2 tbsp</span>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="flex items-center gap-3 rounded-xl bg-white dark:bg-[#2c201b] p-3 shadow-sm ring-1 ring-black/5 dark:ring-white/5">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/20">
+<span class="material-symbols-outlined">spa</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-[#181311] dark:text-white">Garlic</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">3 cloves</span>
+</div>
+</div>
+<!-- Item 6 -->
+<div class="flex items-center gap-3 rounded-xl bg-white dark:bg-[#2c201b] p-3 shadow-sm ring-1 ring-black/5 dark:ring-white/5">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/20">
+<span class="material-symbols-outlined">local_fire_department</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-[#181311] dark:text-white">Chili</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">2 pcs</span>
+</div>
+</div>
+<!-- Item 7 -->
+<div class="flex items-center gap-3 rounded-xl bg-white dark:bg-[#2c201b] p-3 shadow-sm ring-1 ring-black/5 dark:ring-white/5">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/20">
+<span class="material-symbols-outlined">eco</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-[#181311] dark:text-white">Mint Leaves</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">1 bunch</span>
+</div>
+</div>
+<!-- Item 8 -->
+<div class="flex items-center gap-3 rounded-xl bg-white dark:bg-[#2c201b] p-3 shadow-sm ring-1 ring-black/5 dark:ring-white/5">
+<div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary dark:bg-primary/20">
+<span class="material-symbols-outlined">temp_preferences_custom</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-[#181311] dark:text-white">Perilla</span>
+<span class="text-xs text-gray-500 dark:text-gray-400">1 bunch</span>
+</div>
+</div>
+</div>
+<!-- Steps Preview (Optional filler to make page feel full) -->
+<div class="flex flex-col gap-3 pb-8 opacity-60">
+<h3 class="font-display text-lg font-bold text-[#181311] dark:text-white">Preparation</h3>
+<div class="flex items-start gap-4">
+<div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-white">1</div>
+<p class="text-sm leading-relaxed text-gray-600 dark:text-gray-300">Marinate the pork belly with fish sauce, sugar, minced garlic...</p>
+</div>
+<div class="flex items-start gap-4">
+<div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/20 text-xs font-bold text-primary dark:text-primary">2</div>
+<p class="text-sm leading-relaxed text-gray-600 dark:text-gray-300">Prepare the dipping sauce by mixing water, sugar, vinegar...</p>
+</div>
+</div>
+</div>
+<!-- Sticky Action Bar -->
+<div class="fixed bottom-0 left-0 right-0 z-50 border-t border-gray-200 bg-white/90 p-4 pb-8 backdrop-blur-lg dark:border-gray-800 dark:bg-[#221510]/90">
+<div class="mx-auto max-w-md w-full">
+<button class="flex h-14 w-full items-center justify-center gap-2 rounded-xl bg-primary text-base font-bold text-white shadow-lg shadow-primary/25 transition active:scale-[0.98]">
+<span class="material-symbols-outlined">skillet</span>
+<span>Start Cooking</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>
