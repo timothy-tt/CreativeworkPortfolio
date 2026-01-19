@@ -147,15 +147,27 @@
       background: transparent;
       padding: 10px 0 15px 0;
       z-index: 10;
+    }
+
+    .year-section h2::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -40px;
+      right: -40px;
+      bottom: 0;
+      background: transparent;
+      backdrop-filter: none;
+      z-index: -1;
       transition: background 0.2s ease, backdrop-filter 0.2s ease;
     }
 
-    .year-section h2.stuck {
+    .year-section h2.stuck::before {
       background: rgba(250, 250, 250, 0.95);
       backdrop-filter: blur(8px);
     }
 
-    .year-section:nth-child(even) h2.stuck {
+    .year-section:nth-child(even) h2.stuck::before {
       background: rgba(255, 255, 255, 0.95);
     }
 
@@ -273,6 +285,11 @@
 
       .year-section h2 {
         font-size: 2rem;
+      }
+
+      .year-section h2::before {
+        left: -20px;
+        right: -20px;
       }
     }
   </style>
