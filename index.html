@@ -122,64 +122,75 @@
       padding: 10px 0;
     }
 
-    /* Project Grid */
+    /* Projects Container */
     .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
       margin-top: 20px;
     }
 
+    /* Project Block */
     .project {
-      background: #161616;
-      border: 1px solid #252525;
+      padding: 40px 0;
+      border-bottom: 1px solid #333;
+    }
+
+    .project:last-child {
+      border-bottom: none;
+    }
+
+    .project-info {
+      margin-bottom: 30px;
+    }
+
+    .project-info h3 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .project-info p {
+      color: #999;
+      font-size: 1rem;
+      line-height: 1.7;
+      max-width: 800px;
+    }
+
+    /* Image Gallery */
+    .project-images {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .project-images .project-image {
+      flex: 0 0 auto;
+      width: 250px;
+      height: 350px;
+      background: #1a1a1a;
+      border: 1px solid #333;
       border-radius: 8px;
       overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-      border-color: #333;
-    }
-
-    .project-image {
-      width: 100%;
-      height: 200px;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff;
-      font-size: 0.9rem;
-      overflow: hidden;
+      color: #666;
+      font-size: 0.85rem;
     }
 
-    .project-image img {
+    .project-images .project-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: top;
     }
 
-    .project-info {
-      padding: 20px;
-    }
-
-    .project-info h3 {
-      font-size: 1.1rem;
-      margin-bottom: 10px;
-      color: #fff;
-    }
-
-    .project-info p {
-      color: #999;
-      font-size: 0.9rem;
-    }
-
     .project-tags {
-      margin-top: 15px;
+      margin-top: 20px;
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
@@ -187,9 +198,9 @@
 
     .project-tags span {
       background: #252525;
-      padding: 4px 10px;
+      padding: 6px 14px;
       border-radius: 20px;
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       color: #aaa;
     }
 
@@ -344,31 +355,23 @@
       <h2>2022</h2>
       <div class="projects">
         <article class="project">
-          <div class="project-image">
-            <img src="images/2022/belle-ai-landing.png" alt="Belle.ai Website Landing Page">
-          </div>
           <div class="project-info">
-            <h3>Belle.ai - Website Design</h3>
-            <p>Designed the marketing website for Belle.ai, an AI-powered digital skin health platform that identifies over 1,600 skin conditions from smartphone photos to assist healthcare professionals with diagnosis.</p>
-            <div class="project-tags">
-              <span>Web Design</span>
-              <span>Healthcare</span>
-              <span>AI</span>
+            <h3>Belle.ai</h3>
+            <p>Designed the marketing website and mobile app interface for Belle.ai, an AI-powered digital skin health platform that identifies over 1,600 skin conditions from smartphone photos. The app features AI-powered detection results with severity scoring and detailed condition breakdowns for patients and clinicians.</p>
+          </div>
+          <div class="project-images">
+            <div class="project-image">
+              <img src="images/2022/belle-ai-landing.png" alt="Belle.ai Website Landing Page">
+            </div>
+            <div class="project-image">
+              <img src="images/2022/belle-ai-app.png" alt="Belle.ai Mobile App Results Screen">
             </div>
           </div>
-        </article>
-        <article class="project">
-          <div class="project-image">
-            <img src="images/2022/belle-ai-app.png" alt="Belle.ai Mobile App Results Screen">
-          </div>
-          <div class="project-info">
-            <h3>Belle.ai - Mobile App UI</h3>
-            <p>Created the mobile app interface for Belle.ai's skin analysis tool, featuring AI-powered detection results with severity scoring and detailed condition breakdowns for patients and clinicians.</p>
-            <div class="project-tags">
-              <span>Mobile UI</span>
-              <span>Healthcare</span>
-              <span>AI</span>
-            </div>
+          <div class="project-tags">
+            <span>Web Design</span>
+            <span>Mobile UI</span>
+            <span>Healthcare</span>
+            <span>AI</span>
           </div>
         </article>
       </div>
@@ -433,45 +436,25 @@
       <h2>2018</h2>
       <div class="projects">
         <article class="project">
-          <div class="project-image">
-            <img src="images/2018/esoc-login.png" alt="ESOC Login Screen">
-          </div>
           <div class="project-info">
-            <h3>SecureChannels - ESOC Login</h3>
-            <p>Designed the login interface for ESOC (Entertainment Security Operations Center), the world's first centralized hub for secure management of Hollywood entertainment industry content, protecting against breaches like Sony and HBO.</p>
-            <div class="project-tags">
-              <span>Mobile UI</span>
-              <span>Security</span>
-              <span>Entertainment</span>
+            <h3>SecureChannels</h3>
+            <p>Designed the mobile authentication interfaces for SecureChannels, a cybersecurity startup from Irvine, California. Created the ESOC (Entertainment Security Operations Center) login and 2FA verification flows, as well as the patented SUBROSA image-based authentication system that generates 65,000+ character cryptographic keys from user-selected image segments.</p>
+          </div>
+          <div class="project-images">
+            <div class="project-image">
+              <img src="images/2018/esoc-login.png" alt="ESOC Login Screen">
+            </div>
+            <div class="project-image">
+              <img src="images/2018/esoc-verification.png" alt="Phone Number Verification Screen">
+            </div>
+            <div class="project-image">
+              <img src="images/2018/subrosa-login.png" alt="SUBROSA Image-Based Authentication">
             </div>
           </div>
-        </article>
-        <article class="project">
-          <div class="project-image">
-            <img src="images/2018/esoc-verification.png" alt="Phone Number Verification Screen">
-          </div>
-          <div class="project-info">
-            <h3>SecureChannels - 2FA Verification</h3>
-            <p>Created the two-factor authentication flow with SMS verification for secure member access to the ESOC platform, ensuring strict identity verification for handling sensitive entertainment content.</p>
-            <div class="project-tags">
-              <span>Mobile UI</span>
-              <span>Security</span>
-              <span>Authentication</span>
-            </div>
-          </div>
-        </article>
-        <article class="project">
-          <div class="project-image">
-            <img src="images/2018/subrosa-login.png" alt="SUBROSA Image-Based Authentication">
-          </div>
-          <div class="project-info">
-            <h3>SecureChannels - SUBROSA Auth</h3>
-            <p>Designed the SUBROSA image-based authentication interface, a patented system that generates 65,000+ character cryptographic keys from user-selected image segments, replacing traditional passwords with visual mnemonics.</p>
-            <div class="project-tags">
-              <span>Mobile UI</span>
-              <span>Security</span>
-              <span>Innovation</span>
-            </div>
+          <div class="project-tags">
+            <span>Mobile UI</span>
+            <span>Security</span>
+            <span>Authentication</span>
           </div>
         </article>
       </div>
