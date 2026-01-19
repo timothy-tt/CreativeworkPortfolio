@@ -144,13 +144,18 @@
       margin-bottom: 0;
       position: sticky;
       top: 0;
-      background: rgba(250, 250, 250, 0.95);
-      backdrop-filter: blur(8px);
+      background: transparent;
       padding: 10px 0 15px 0;
       z-index: 10;
+      transition: background 0.2s ease, backdrop-filter 0.2s ease;
     }
 
-    .year-section:nth-child(even) h2 {
+    .year-section h2.stuck {
+      background: rgba(250, 250, 250, 0.95);
+      backdrop-filter: blur(8px);
+    }
+
+    .year-section:nth-child(even) h2.stuck {
       background: rgba(255, 255, 255, 0.95);
     }
 
@@ -596,6 +601,34 @@
     }, observerOptions);
 
     sections.forEach(section => observer.observe(section));
+
+    // Sticky header detection
+    const yearHeaders = document.querySelectorAll('.year-section h2');
+
+    const stickyObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          // When sentinel goes out of view at the top, header is stuck
+          entry.target.nextElementSibling.classList.toggle('stuck', !entry.isIntersecting);
+        });
+      },
+      { threshold: 0, rootMargin: '-1px 0px 0px 0px' }
+    );
+
+    // Add sentinel elements before each h2 to detect when h2 becomes stuck
+    yearHeaders.forEach(header => {
+      const sentinel = document.createElement('div');
+      sentinel.className = 'sticky-sentinel';
+      sentinel.style.height = '1px';
+      sentinel.style.width = '100%';
+      sentinel.style.position = 'absolute';
+      sentinel.style.top = '0';
+      sentinel.style.left = '0';
+      sentinel.style.pointerEvents = 'none';
+      header.parentElement.style.position = 'relative';
+      header.parentElement.insertBefore(sentinel, header);
+      stickyObserver.observe(sentinel);
+    });
   </script>
 </body>
 </html>
