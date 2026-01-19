@@ -259,11 +259,31 @@
       transition: width 0.1s ease;
     }
 
-    /* Responsive */
+    /* Responsive - Tablet */
     @media (max-width: 768px) {
       header {
         margin-right: 50px;
         padding: 20px 20px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header h2 {
+        font-size: 1.6rem;
+      }
+
+      header h3 {
+        font-size: 1.3rem;
+      }
+
+      header h4 {
+        font-size: 1.1rem;
+      }
+
+      header .bio {
+        max-width: 100%;
       }
 
       .timeline-nav {
@@ -290,6 +310,106 @@
       .year-section h2::before {
         left: -20px;
         right: -20px;
+      }
+
+      .project-info h3 {
+        font-size: 1.4rem;
+      }
+
+      .project-info p {
+        max-width: 100%;
+      }
+
+      /* Make all images respect viewport width */
+      .project-images .project-image img,
+      .project-images .project-image img.phone,
+      .project-images .project-image img.medium,
+      .project-images .project-image img.desktop,
+      .project-images .project-image img.wide {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    /* Responsive - Mobile */
+    @media (max-width: 480px) {
+      header {
+        margin-right: 40px;
+        padding: 15px 15px;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      header h2 {
+        font-size: 1.25rem;
+      }
+
+      header h3 {
+        font-size: 1rem;
+      }
+
+      header h4 {
+        font-size: 0.9rem;
+      }
+
+      header .bio {
+        font-size: 0.9rem;
+        margin-top: 15px;
+      }
+
+      .timeline-nav {
+        width: 40px;
+      }
+
+      .timeline-nav a {
+        font-size: 0.55rem;
+        padding: 5px 2px;
+      }
+
+      main {
+        margin-right: 40px;
+      }
+
+      .year-section {
+        padding: 30px 15px;
+        min-height: auto;
+      }
+
+      .year-section h2 {
+        font-size: 1.6rem;
+        padding: 8px 0 12px 0;
+      }
+
+      .year-section h2::before {
+        left: -15px;
+        right: -15px;
+      }
+
+      .project {
+        padding: 25px 0;
+      }
+
+      .project-info {
+        margin-bottom: 20px;
+      }
+
+      .project-info h3 {
+        font-size: 1.2rem;
+      }
+
+      .project-info h4 {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+      }
+
+      .project-info p {
+        font-size: 0.9rem;
+      }
+
+      .project-images {
+        gap: 8px;
       }
     }
   </style>
