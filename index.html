@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>UI/UX Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,6 +23,7 @@
       background: #fafafa;
       color: #333333;
       line-height: 1.6;
+      padding-top: env(safe-area-inset-top, 0px);
     }
 
     body::before {
@@ -143,7 +144,7 @@
       color: #111;
       margin-bottom: 0;
       position: sticky;
-      top: 0;
+      top: calc(env(safe-area-inset-top, 0px) + 3px);
       background: transparent;
       padding: 10px 0 15px 0;
       z-index: 10;
@@ -152,7 +153,7 @@
     .year-section h2::before {
       content: '';
       position: absolute;
-      top: 0;
+      top: calc(-3px - env(safe-area-inset-top, 0px));
       left: -40px;
       right: -40px;
       bottom: 0;
@@ -250,7 +251,7 @@
     /* Progress Indicator */
     .progress-bar {
       position: fixed;
-      top: 0;
+      top: env(safe-area-inset-top, 0px);
       left: 0;
       height: 3px;
       background: linear-gradient(90deg, #667eea, #764ba2);
